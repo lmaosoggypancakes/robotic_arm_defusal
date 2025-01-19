@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useDevicesList, useUserMedia } from "@vueuse/core";
+import { useUserMedia } from "@vueuse/core";
 import { reactive, ref, watchEffect } from "vue";
 
 const currentCamera = ref<string>();
@@ -26,7 +26,15 @@ watchEffect(() => {
     class="flex flex-col items-center justify-center gap-4 text-center p-4 bg-white text-aqua"
   >
     <div class="p-4 border-2 border-aqua rounded-md">
-      <video ref="video" muted autoplay controls class="h-100 w-auto" />
+      <video
+        ref="video"
+        muted
+        autoplay
+        controls
+        width="500"
+        height="500"
+    
+      />
       <button
         @click="enabled = !enabled"
         class="px-4 py-2 rounded-sm bg-aqua text-base max-w-sm w-full"

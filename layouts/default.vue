@@ -1,5 +1,8 @@
 <template>
-  <div class="bg-base w-screen h-screen overflow-hidden relative flex flex-col just" ref="matrix">
+  <div
+    class="bg-base w-screen h-screen overflow-hidden relative flex flex-col justify-center items-center"
+    ref="matrix"
+  >
     <div
       class="w-screen h-1 bg-base rotate-[30deg] absolute bottom-0 -translate-x-[200px] overflow-hidden"
     >
@@ -12,7 +15,7 @@
     </div>
     <div
       class="w-screen h-1 bg-base rotate-[-80deg] absolute overflow-hidden translate-x-[800px] -bottom-[50px]"
-    > 
+    >
       <div class="h-full bg-aqua shadow-2xl" ref="p3"></div>
     </div>
     <slot />
